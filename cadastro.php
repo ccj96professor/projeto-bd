@@ -24,6 +24,7 @@
 
         //criando variaveis para armazenar cada input
         $nome = $_POST['nome'];
+        $senha = $_POST['senha'];
         $email = $_POST['email'];
         $telefone = $_POST['telefone'];
         $sexo = $_POST['genero'];
@@ -33,7 +34,7 @@
         $endereco = $_POST['endereco'];
 
         //comando para enviar as informações para o banco de dados.
-        $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,email,telefone,sexo,data_nasc,cidade,estado,endereco) VALUES('$nome','$email','$telefone','$sexo','$data_nasc','$cidade','$estado','$endereco')");
+        $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,senha,email,telefone,sexo,data_nasc,cidade,estado,endereco) VALUES('$nome','$senha','$email','$telefone','$sexo','$data_nasc','$cidade','$estado','$endereco')");
 
     }
 ?>
@@ -138,6 +139,11 @@
                 <div class="inputBox">
                     <input type="text" name="nome" id="nome" class="inputUser" required>
                     <label for="nome" class="labelInput">Nome complete</label> 
+                </div><br><br>
+
+                <div class="inputBox">
+                    <input type="text" name="senha" id="senha" class="inputUser" required>
+                    <label for="senha" class="labelInput">Senha</label> 
                 </div><br><br>
 
                 <div class="inputBox">
