@@ -33,7 +33,7 @@
         }
 
         /* botão enviar */
-        button{
+        .inputSubmit{
             background-color: dodgerblue;
             border: none;
             padding: 15px;
@@ -42,7 +42,7 @@
             color: white;
             font-size: 15px;
         }
-        button:hover{
+        .inputSubmit:hover{
             background-color: deepskyblue;
             cursor: pointer;
         }
@@ -54,14 +54,20 @@
 </head>
 
 <body>
+
+    <a href="home.php">Voltar</a>
     
     <div class="box">
         <h1>Login</h1>
-        <input type="text" placeholder="e-mail">
-        <br><br>
-        <input type="text" placeholder="senha">
-        <br><br>
-        <button>Enviar</button>
+
+        <form action="testlogin.php" method="POST">
+            <input type="text" name="email" placeholder="e-mail">
+            <br><br>
+            <input type="password" name="senha" placeholder="senha">
+            <br><br>
+            <input type="submit" class="inputSubmit" name="submit" value="Enviar">
+        </form>
+
     </div>
     
 </body>
