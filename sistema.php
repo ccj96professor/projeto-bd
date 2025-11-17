@@ -1,21 +1,3 @@
-<?php 
-//iniciando sessão
-session_start();
-
-// print_r($_SESSION);//imprime na tela as variaveis utilizada na sessão
-
-//verificação se a variavel sessão foi iniciada com algum valor
-if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)){
-    unset($_SESSION['email']);//destruir a variavel que tenha a SESSION amarzenada
-    unset($_SESSION['senha']);
-    header('location: login.php');
-}else{
-    $logado= $_SESSION['email'];
-}
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -56,4 +38,5 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> -->
 </body>
+
 </html>
